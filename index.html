@@ -49,7 +49,23 @@
 
 	<!-- BG -->
 	<div id="bg"></div>
-
+	<!-- 换背景 -->
+	<script>
+		var Bgs = [
+			'static/images/bg.jpg',
+			'static/images/bg1.jpg',
+			'static/images/bg2.jpg',
+			'static/images/bg3.jpg',
+			'static/images/bg4.jpg',
+			'static/images/bg5.jpg',
+			'static/images/bg6.jpg',
+		];
+		var Bgurl = Bgs[Math.floor(Math.random()*7)];
+		document.write(
+			'<style>#bg:after{background-image:url('+Bgurl+')}</style>'
+		);	
+	</script>
+	
 	<!-- Scripts -->
 	<script src="./static/js/jquery.min.js"></script>
 	<script src="./static/js/skel.min.js"></script>
