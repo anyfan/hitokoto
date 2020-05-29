@@ -438,7 +438,7 @@ function randomSentence(apichange) {
 			url = "https://api.anyfan.top/hitokoto/?type=yulu";
 			break;
 		default:
-			url = "https://api.anyfan.top/hitokoto/?type=jitang";
+			url = "https://api.anyfan.top/hitokoto/?type=dog";
 	}
 	$.get(url, function (data, status) {
 		if (status != 'success') {
@@ -457,8 +457,9 @@ sz = [1, 2, 3];
 
 function type1() {
 	randomSentence(sz[0]);
-	var sz2 = ["舔狗日记", "毒鸡汤", "社会语录"]
-	console.log(sz2[sz[0]-1]);
+	// 控制台输出调试
+	// var sz2 = ["舔狗日记", "毒鸡汤", "社会语录"]
+	// console.log(sz2[sz[0]-1]);
 }
 function type2() {
 	if (sz[0] == 1) {
@@ -495,10 +496,11 @@ function type3() {
 	else if (sz[0] == 3) {
 		sz = [1, 2, 3];
 		document.getElementById('biaoti').innerHTML = "舔狗日记";
-		document.getElementById('biaoti2').innerHTML = "社会语录";
+		document.getElementById('biaoti3').innerHTML = "社会语录";
 	}
 	type1();
 }
 
-type2();
-
+type1();
+// 标题初始化
+document.getElementById('biaoti').innerHTML = "舔狗日记";
