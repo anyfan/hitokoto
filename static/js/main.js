@@ -429,16 +429,16 @@ function randomSentence(apichange) {
 	var url
 	switch (apichange) {
 		case 1:
-			url = "https://api.anyfan.top/hitokoto/?type=dog";
+			url = "https://api.anyfan.top/hitokoto/?cat=d";
 			break;
 		case 2:
-			url = "https://api.anyfan.top/hitokoto/?type=jitang";
+			url = "https://api.anyfan.top/hitokoto/?cat=j";
 			break;
 		case 3:
-			url = "https://api.anyfan.top/hitokoto/?type=yulu";
+			url = "https://api.anyfan.top/hitokoto/?cat=y";
 			break;
 		default:
-			url = "https://api.anyfan.top/hitokoto/?type=dog";
+			url = "https://api.anyfan.top/hitokoto/?cat=d";
 	}
 	$.get(url, function (data, status) {
 		if (status != 'success') {
